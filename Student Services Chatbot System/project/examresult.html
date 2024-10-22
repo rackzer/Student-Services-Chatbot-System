@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Exam Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #1087FF;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1087FF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .login-form button:hover {
+            background-color: #0074CC;
+        }
+        .captcha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .captcha input {
+            width: calc(70% - 10px);
+        }
+        .captcha img {
+            width: 70px;
+            height: 40px;
+        }
+        .grade-scale {
+            margin-top: 20px;
+        }
+        .grade-scale h3 {
+            text-align: center;
+        }
+        .grade-scale table {
+            width: 100%;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        .grade-scale th, .grade-scale td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Student Login</h1>
+    </header>
+
+    <!-- Login Form Section -->
+    <div class="container login-form">
+        <h2>Login to View Your Results</h2>
+        <form action="results.html" method="get">
+            <input type="text" name="enrollment" placeholder="Enrollment No" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <!-- CAPTCHA -->
+            <div class="captcha">
+                <input type="text" name="captcha" placeholder="Enter CAPTCHA" required>
+                <img src="captcha.jpg" alt="CAPTCHA">
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Grade Scale Information -->
+        <div class="grade-scale">
+            <h3>Grade Scale</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marks Range</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>90-100</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <td>80-89</td>
+                        <td>A</td>
+                    </tr>
+                    <tr>
+                        <td>70-79</td>
+                        <td>B+</td>
+                    </tr>
+                    <tr>
+                        <td>60-69</td>
+                        <td>B</td>
+                    </tr>
+                    <tr>
+                        <td>50-59</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>40-49</td>
+                        <td>D</td>
+                    </tr>
+                    <tr>
+                        <td>Below 40</td>
+                        <td>F</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Student Services Chatbot. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
